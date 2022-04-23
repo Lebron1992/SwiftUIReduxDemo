@@ -11,6 +11,11 @@
 		FDB234682813EBA80028DCE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB234672813EBA80028DCE2 /* ContentView.swift */; };
 		FDB2346A2813EBA90028DCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB234692813EBA90028DCE2 /* Assets.xcassets */; };
 		FDB2346D2813EBA90028DCE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB2346C2813EBA90028DCE2 /* Preview Assets.xcassets */; };
+		FDB234752813EBBD0028DCE2 /* SwiftUIRedux in Frameworks */ = {isa = PBXBuildFile; productRef = FDB234742813EBBD0028DCE2 /* SwiftUIRedux */; };
+		FDB2347B2813EBFB0028DCE2 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB234772813EBFB0028DCE2 /* Store.swift */; };
+		FDB2347C2813EBFB0028DCE2 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB234782813EBFB0028DCE2 /* AppReducer.swift */; };
+		FDB2347D2813EBFB0028DCE2 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB234792813EBFB0028DCE2 /* AppAction.swift */; };
+		FDB2347E2813EBFB0028DCE2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2347A2813EBFB0028DCE2 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		FDB234672813EBA80028DCE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDB234692813EBA90028DCE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB2346C2813EBA90028DCE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDB234772813EBFB0028DCE2 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		FDB234782813EBFB0028DCE2 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		FDB234792813EBFB0028DCE2 /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		FDB2347A2813EBFB0028DCE2 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB234752813EBBD0028DCE2 /* SwiftUIRedux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +61,7 @@
 		FDB234642813EBA80028DCE2 /* SwiftUIReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FDB234762813EBEE0028DCE2 /* Redux */,
 				FDB234652813EBA80028DCE2 /* SwiftUIReduxDemoApp.swift */,
 				FDB234672813EBA80028DCE2 /* ContentView.swift */,
 				FDB234692813EBA90028DCE2 /* Assets.xcassets */,
@@ -65,6 +76,17 @@
 				FDB2346C2813EBA90028DCE2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDB234762813EBEE0028DCE2 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				FDB234792813EBFB0028DCE2 /* AppAction.swift */,
+				FDB234782813EBFB0028DCE2 /* AppReducer.swift */,
+				FDB2347A2813EBFB0028DCE2 /* AppState.swift */,
+				FDB234772813EBFB0028DCE2 /* Store.swift */,
+			);
+			path = Redux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +105,9 @@
 			dependencies = (
 			);
 			name = SwiftUIReduxDemo;
+			packageProductDependencies = (
+				FDB234742813EBBD0028DCE2 /* SwiftUIRedux */,
+			);
 			productName = SwiftUIReduxDemo;
 			productReference = FDB234622813EBA80028DCE2 /* SwiftUIReduxDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = FDB234592813EBA80028DCE2;
+			packageReferences = (
+				FDB234732813EBBD0028DCE2 /* XCRemoteSwiftPackageReference "SwiftUIRedux" */,
+			);
 			productRefGroup = FDB234632813EBA80028DCE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB2347B2813EBFB0028DCE2 /* Store.swift in Sources */,
 				FDB234682813EBA80028DCE2 /* ContentView.swift in Sources */,
+				FDB2347D2813EBFB0028DCE2 /* AppAction.swift in Sources */,
+				FDB2347E2813EBFB0028DCE2 /* AppState.swift in Sources */,
+				FDB2347C2813EBFB0028DCE2 /* AppReducer.swift in Sources */,
 				FDB234662813EBA80028DCE2 /* SwiftUIReduxDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDB234732813EBBD0028DCE2 /* XCRemoteSwiftPackageReference "SwiftUIRedux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lebron1992/SwiftUIRedux.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDB234742813EBBD0028DCE2 /* SwiftUIRedux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDB234732813EBBD0028DCE2 /* XCRemoteSwiftPackageReference "SwiftUIRedux" */;
+			productName = SwiftUIRedux;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDB2345A2813EBA80028DCE2 /* Project object */;
 }
